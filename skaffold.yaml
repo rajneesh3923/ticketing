@@ -4,6 +4,7 @@ deploy:
   kubectl:
     manifests:
       - ./infra/k8s/*
+      - ./infra/k8s-dev/*
 build:
   local:
     push: false
@@ -47,7 +48,7 @@ build:
       sync:
         manual:
           - src: "src/**/*.js"
-            dest: .   
+            dest: .
     - image: rajneesh4736/payments
       context: payments
       docker:
@@ -56,4 +57,3 @@ build:
         manual:
           - src: "src/**/*.js"
             dest: .
-    
