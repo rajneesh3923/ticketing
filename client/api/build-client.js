@@ -4,7 +4,7 @@ export default ({ req }) => {
   if (typeof window === "undefined") {
     return axios.create({
       baseURL:
-        "http://ingress-nginx-controller.ingress-nginx.svc.cluster.local",
+        "http://www.anmoltravelsserver.in",
       headers: req.headers,
     });
   } else {
@@ -13,3 +13,7 @@ export default ({ req }) => {
     });
   }
 };
+
+
+      // baseURL:
+      //   "http://ingress-nginx-controller.ingress-nginx.svc.cluster.local",
